@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Flask + SQLite CRUD demo</p>
+    </header>
+
+    <form id="new-task" class="new-task">
+      <input id="title" type="text" placeholder="What needs to be done?" autocomplete="off" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty" hidden>No tasks yet. Add one above.</p>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
